@@ -3,6 +3,29 @@
 
 $color-main: #ef220f;
 
+@mixin reset-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin media($max-width: 640px) {
+  @media only screen and (max-width: $max-width) {
+    @content;
+  }
+}
+
 html {
   font-size: 62.5%;
 }
@@ -13,6 +36,7 @@ body {
   line-height: 1.6;
   word-wrap: break-word;
   color: #444;
+  border-top: 6px solid $color-main;
 }
 
 img {
@@ -21,17 +45,127 @@ img {
   height: auto;
 }
 
+a {
+  color: #1e6bb8;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
 .site-header,
-.gnavi,
+.gnavi > ul,
 .site-footer,
 .site-main section {
-  width: 960px;
+  width: 1200px;
   margin: 0 auto;
 }
 
-.site-main {
-  background-color: $color-main;
-  color: #fff;
+.site-header {
+  text-align: center;
+  margin: 162px auto; //TODO
 }
 
+.cover {
+  &__title {
+    font-size: 6.6rem;
+  }
+  &__description {
+  }
+}
 
+.github-link {
+  a {
+    display: inline-block;
+    margin-bottom: 1rem;
+    padding: 0.75rem 1rem;
+    color: $color-main;
+    border: 1px solid $color-main;
+    border-radius: 0.3rem;
+    transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+    & + a {
+      margin-left: 1rem;
+    }
+    &:hover {
+      color: $color-main;
+      border: 1px solid $color-main;
+      text-decoration: none;
+    }
+  }
+}
+
+.gnavi {
+  @include clearfix();
+  background-color: $color-main;
+  ul {
+    @include reset-list();
+    margin: 0 auto;
+  }
+  li {
+    float: left;
+    width: 25%;
+    &:last-child a {
+      border-right: 1px solid #fff;
+    }
+  }
+  a {
+    color: #fff;
+    padding: 1rem 0;
+    display: block;
+    text-align: center;
+    border-left: 1px solid #fff;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.site-main {
+  section {
+    margin-bottom: 9rem; // TODO
+    h2 {
+      text-align: center;
+      font-size: 4rem;
+    }
+    h3 {
+      text-align: center;
+    }
+  }
+}
+
+.site-footer {
+  text-align: center;
+}
+
+//TODO
+.column4 {
+  @include clearfix();
+  @include reset-list();
+  li {
+    float: left;
+    width: 25%;
+    text-align: center;
+  }
+  p {
+    text-align: left;
+    padding: 0 1em;
+  }
+}
+
+//TODO
+.amazon {
+  text-align: center;
+  height: 300px;
+  a {
+    margin: 100px auto 0;
+    display: inline-block;
+    margin-bottom: 1rem;
+    padding: 1.75rem 8rem;
+    color: $color-main;
+    border: 1px solid $color-main;
+    border-radius: 0.3rem;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
