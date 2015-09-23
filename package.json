@@ -1,0 +1,29 @@
+{
+  "name": "WebDesignNewStandardTechnique37",
+  "version": "1.0.0",
+  "description": "「現場のプロが教える WEBデザイン 新・スタンダードテクニック37」のテクニックを利用したデモサイト",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mochiflappe/WebDesignNewStandardTechnique37.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mochiflappe/WebDesignNewStandardTechnique37/issues"
+  },
+  "homepage": "https://github.com/mochiflappe/WebDesignNewStandardTechnique37",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-csscomb": "^3.0.6",
+    "gulp-load-plugins": "^1.0.0-rc.1",
+    "gulp-pleeease": "^1.2.0",
+    "gulp-plumber": "^1.0.1",
+    "gulp-sass": "^2.0.4",
+    "gulp-watch": "^4.3.5"
+  }
+}
