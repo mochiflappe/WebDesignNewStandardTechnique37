@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+$color-main: #e05445;
+//$color-main: #ef3623;
+
+@mixin reset-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin media($max-width: 640px) {
+  @media only screen and (max-width: $max-width) {
+    @content;
+  }
+}
