@@ -1,171 +1,410 @@
 @charset "UTF-8";
-@import 'normalize';
+@import './base';
+@import './mixin';
+@import '../animate.scss/animate';
 
-$color-main: #ef220f;
-
-@mixin reset-list {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-@mixin clearfix {
-  &:before,
-  &:after {
-    content: "";
-    display: table;
-  }
-  &:after {
-    clear: both;
-  }
-}
-
-@mixin media($max-width: 640px) {
-  @media only screen and (max-width: $max-width) {
-    @content;
-  }
-}
-
-html {
-  font-size: 62.5%;
-}
-
-body {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 1.6em;
-  line-height: 1.6;
-  word-wrap: break-word;
-  color: #444;
-  border-top: 6px solid $color-main;
-}
-
-img {
-  vertical-align: bottom;
-  max-width: 100%;
-  height: auto;
-}
-
-a {
-  color: #1e6bb8;
-  text-decoration: none;
-  &:hover {
-    text-decoration: underline;
-  }
-}
-
-.site-header,
-.gnavi > ul,
-.site-footer,
-.site-main section {
-  width: 1200px;
+.container,
+.section-text,
+.section-event {
+  width: 960px;
   margin: 0 auto;
+  @include clearfix();
 }
 
 .site-header {
-  text-align: center;
-  margin: 162px auto; //TODO
+  background: url('../images/book_bg.jpg') no-repeat center center;
+  background-size: cover;
+  display: table;
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 
 .cover {
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+  background: linear-gradient(to bottom, rgba(246, 79, 60, .8) 0%, rgba(239, 34, 15, .8) 100%);
+  margin-top: -1em;
+  color: #fff;
   &__title {
     font-size: 6.6rem;
+    margin: .5em 0 0;
+    line-height: 1.2;
   }
   &__description {
+    font-weight: normal;
+  }
+}
+
+.cover__arrow {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  font-size: 10rem;
+  margin-left: -32px;
+  a {
+    color: #fff;
+    &:hover {
+      @include bounce(
+      $duration: 1s,
+      $count: infinite,
+      $delay: 0
+      );
+    }
   }
 }
 
 .github-link {
-  a {
+  @include reset-list();
+  margin: 2.5em 0;
+  li {
     display: inline-block;
-    margin-bottom: 1rem;
-    padding: 0.75rem 1rem;
-    color: $color-main;
-    border: 1px solid $color-main;
-    border-radius: 0.3rem;
-    transition: color 0.2s, background-color 0.2s, border-color 0.2s;
-    & + a {
-      margin-left: 1rem;
+    & + li {
+      margin-left: 2rem;
     }
+  }
+  a {
+    padding: 0.75rem 1.5rem;
+    display: block;
+    color: $color-main;
+    border: 2px solid #fff;
+    border-radius: 0.4rem;
+    transition: color 0.4s, background-color 0.4s;
+    background-color: #fff;
     &:hover {
-      color: $color-main;
-      border: 1px solid $color-main;
       text-decoration: none;
+      background-color: rgba(255, 255, 255, 0.1);
+      color: #fff;
     }
   }
 }
 
 .gnavi {
-  @include clearfix();
-  background-color: $color-main;
+  width: 100%;
+  text-align: right;
+  position: absolute;
+  top: 0;
+  padding: 30px 40px;
+  box-sizing: border-box;
   ul {
     @include reset-list();
     margin: 0 auto;
   }
   li {
-    float: left;
-    width: 25%;
-    &:last-child a {
-      border-right: 1px solid #fff;
-    }
+    display: inline-block;
+    margin-left: 35px;
   }
   a {
     color: #fff;
-    padding: 1rem 0;
+    padding: .3rem 0;
     display: block;
-    text-align: center;
-    border-left: 1px solid #fff;
+    border-bottom: 1px solid #fff;
     &:hover {
       text-decoration: none;
     }
   }
 }
 
-.site-main {
-  section {
-    margin-bottom: 9rem; // TODO
-    h2 {
-      text-align: center;
-      font-size: 4rem;
-    }
-    h3 {
-      text-align: center;
+.section-text {
+  height: 100%;
+  line-height: 1;
+  display: table;
+  &__wrapper {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+  }
+  &__number {
+    color: rgba(239, 34, 15, 0.64);
+    position: relative;
+    text-align: center;
+    font-size: 500px;
+    letter-spacing: -30px;
+    text-indent: -.6em;
+    > span {
+      font-size: 5rem;
+      position: absolute;
+      bottom: 45px;
+      left: 560px;
+      margin: 0;
+      letter-spacing: 0;
+      text-align: left;
+      text-indent: 0;
     }
   }
 }
 
-.site-footer {
-  text-align: center;
+.chrome .section-text {
+  &__number {
+    background-image: url('../images/book_bg.jpg');
+    background-size: cover;
+    background-clip: text;
+    > span {
+      background-image: url('../images/book_bg.jpg');
+      background-size: cover;
+      background-clip: text;
+    }
+  }
 }
 
-//TODO
-.column4 {
+.section-header {
+  margin: 0 0 40px;
+  &:after {
+    content: '';
+    display: block;
+    height: 1px;
+    background-color: rgba(239, 34, 15, .3);
+    width: 30%;
+    margin: 40px auto;
+  }
+}
+
+.section-title {
+  text-align: center;
+  font-size: 4rem;
+  font-weight: normal;
+  margin: 0;
+}
+
+.section-subtitle {
+  text-align: center;
+  font-weight: normal;
+  margin: 0;
+}
+
+.section-description {
+  border-top: 1px solid $color-main;
+  padding: 60px 0 70px;
+}
+
+.description-list {
+  @include reset-list();
+  margin-top: 60px;
+  li {
+    @include clearfix();
+    clear: both;
+    margin-bottom: 4rem;
+  }
+  &__title {
+
+  }
+  &__icon-bg {
+    float: left;
+    margin-right: 2em;
+    border-radius: 90px;
+    overflow: hidden;
+    height: 180px;
+    width: 180px;
+    background-color: $color-main;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    i {
+      height: 56px;
+      width: 56px;
+      font-size: 56px;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      margin: auto;
+    }
+  }
+}
+
+.section-author {
+  color: #fff;
+  padding: 60px 0 70px;
+  background-color: #383838;
+  .section-header:after {
+    background-color: rgba(255, 255, 255, .3);
+  }
+}
+
+.author-list {
+  margin-top: 1em;
   @include clearfix();
   @include reset-list();
   li {
     float: left;
     width: 25%;
     text-align: center;
+    > div {
+      width: 200px;
+      margin: 0 auto;
+    }
   }
-  p {
+  &__img {
+    border-radius: 100px;
+    width: 100%;
+  }
+  &__title {
+
+  }
+  &__text {
     text-align: left;
-    padding: 0 1em;
   }
 }
 
-//TODO
-.amazon {
+.notes {
+  margin: 40px 0 0;
   text-align: center;
-  height: 300px;
+  color: #929292;
+}
+
+.section-event {
+  padding: 60px 0 70px;
+}
+
+.event-info {
+  @include clearfix();
+  margin-top: 30px;
+  &__title {
+    color: $color-main;
+    font-size: 1.8rem;
+  }
+}
+
+.event-summary {
+  float: left;
+  width: 48%;
+}
+
+.event-schedule {
+  float: right;
+  width: 48%;
+  margin-bottom: 2em;
+}
+
+.google-map {
+  clear: both;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  height: 0;
+  margin: 0 auto;
+  padding-bottom: 460px;
+}
+
+.section-buy {
+  padding: 60px 0 70px;
+  background-color: #f1f1f1;
+}
+
+.book-img {
+  float: right;
+  width: 48%;
+}
+
+.book-buy {
+  float: left;
+  display: table;
+  width: 48%;
+  margin-top: 120px;
+  &__title {
+    font-size: 4rem;
+  }
+}
+
+.amazon {
   a {
-    margin: 100px auto 0;
+    margin: 40px auto 0;
     display: inline-block;
     margin-bottom: 1rem;
     padding: 1.75rem 8rem;
-    color: $color-main;
-    border: 1px solid $color-main;
+    border: 2px solid $color-main;
+    background-color: $color-main;
+    color: #fff;
     border-radius: 0.3rem;
+    transition: color 0.4s, background-color 0.4s;
     &:hover {
       text-decoration: none;
+      background-color: #fff;
+      color: $color-main;
     }
+  }
+}
+
+.site-footer {
+  text-align: center;
+  border-top: 1px solid darken($color-main, 15%);
+  background-color: $color-main;
+  padding: 15px 0;
+  .container {
+    color: #fff;
+  }
+  a {
+    color: #fff;
+  }
+}
+
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  transition: all .6s ease;
+  min-width: 960px;
+  @include media {
+    min-width: 0;
+  }
+}
+
+.spinner {
+  height: 30px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.spinner > div {
+  background-color: $color-main;
+  height: 100%;
+  width: 6px;
+  display: inline-block;
+  animation: stretchdelay 1.2s infinite ease-in-out;
+}
+
+.spinner .rect2 {
+  animation-delay: -1.1s;
+}
+
+.spinner .rect3 {
+  animation-delay: -1.0s;
+}
+
+.spinner .rect4 {
+  animation-delay: -0.9s;
+}
+
+.spinner .rect5 {
+  animation-delay: -0.8s;
+}
+
+@-webkit-keyframes stretchdelay {
+  0%, 40%, 100% {
+    transform: scaleY(0.4)
+  }
+  20% {
+    transform: scaleY(1.0)
+  }
+}
+
+@keyframes stretchdelay {
+  0%, 40%, 100% {
+    transform: scaleY(0.4);
+  }
+  20% {
+    transform: scaleY(1.0);
   }
 }

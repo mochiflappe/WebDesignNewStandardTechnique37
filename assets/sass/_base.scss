@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+html, body {
+  height: 100%;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.6em;
+  line-height: 1.6;
+  word-wrap: break-word;
+  min-width: 960px;
+  color: #444;
+}
+
+img {
+  vertical-align: bottom;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: #444;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}

@@ -2,129 +2,223 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>WebDesign Standard Technique 37</title>
+  <title>Web Design New Standard Technique 37</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="assets/css/normalize.css"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="assets/css/style.css"/>
 </head>
 <body>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-42655851-7', 'auto');
+  ga('send', 'pageview');
+
+</script>
 <header class="site-header" role="banner">
-  <h1 class="cover__title">Web Design<br>New Standard Technique 37</h1>
-
-  <h2 class="cover__description">「現場のプロが教える WEBデザイン 新・スタンダードテクニック37」<br>書籍のテクニックを利用したサンプルサイト</h2>
-
-  <div class="github-link">
-    <a href="https://github.com/mochiflappe/WebDesignNewStandardTechnique37">View on GitHub</a>
-    <a href="https://github.com/mochiflappe/WebDesignNewStandardTechnique37/zipball/gh-pages">Download .zip</a>
-    <a href="https://github.com/mochiflappe/WebDesignNewStandardTechnique37/tarball/gh-pages">Download
-      .tar.gz</a>
+  <div class="cover">
+    <div class="cover__flipInX">
+      <h1 class="cover__title">Web Design<br>New Standard Technique 37</h1>
+      <h2 class="cover__description">「現場のプロが教える WEBデザイン 新・スタンダードテクニック37」<br>書籍のテクニックを利用したサンプルサイト</h2>
+    </div>
+    <ul class="github-link">
+      <li>
+        <a href="https://github.com/mochiflappe/WebDesignNewStandardTechnique37">View on GitHub</a>
+      </li>
+      <li>
+        <a href="https://github.com/mochiflappe/WebDesignNewStandardTechnique37/zipball/gh-pages">Download .zip</a>
+      </li>
+      <li>
+        <a href="https://github.com/mochiflappe/WebDesignNewStandardTechnique37/tarball/gh-pages">Download.tar.gz</a>
+      </li>
+    </ul>
+  </div>
+  <div class="cover__arrow"><a href="#section-text"><i class="fa fa-angle-down"></i></a>
   </div>
 </header>
 <nav class="gnavi" role="navigation">
   <ul>
-    <li><a href="#"><span>内容紹介</span></a></li>
-    <li><a href="#">著者一覧</a></li>
-    <li><a href="#">出版イベント</a></li>
-    <li><a href="#">オンラインショップ</a></li>
+    <li><a href="#section-description">内容紹介</a></li>
+    <li><a href="#section-author">著者一覧</a></li>
+    <li><a href="#section-event">出版イベント</a></li>
+    <li><a href="#section-buy">ショップ</a></li>
   </ul>
 </nav>
+<div class="section-text" id="section-text">
+  <div class="section-text__wrapper">
+    <div class="section-text__number">
+      37<span>New Standard<br>Technique</span>
+    </div>
+  </div>
+</div>
 <div class="site-main" role="main">
-  <section>
-    <h2>内容紹介</h2>
-
-    <h3>〜いまWebでよく見るデザイン手法が勢ぞろい!!〜</h3>
-    <p>
-      最近は、Webサイト制作で使用する技術が大きく様変わりしはじめています。“モバイルファースト"と呼ばれる考え方が広まっているように、PCよりもスマートフォンからのアクセスのほうが多いWebサイトはすでに珍しくありません。また、いわゆるレガシーブラウザも淘汰されつつあることから、現在はHTML5+CSS3に対応したモダンブラウザを前提に、多彩なデバイスに対応できるWebサイトづくりが主流になっています。</p>
-    <p>
-      本書はこのような制作状況の進化を踏まえ、「これからのWeb制作のスタンダード」となる手法をまとめた解説書です。近年のWebサイトでよく見られるレイアウト/ナビゲーション/エフェクト/UIパーツをステップ・バイ・ステップ形式で紹介しています。ドロップダウンメニューやスライドショーなどの基本から、背景全面動画やMasonryなどの流行の手法まで、いまのWebデザインに欠かせないテクニックを網羅しました。サンプルデータもダウンロードできるので、手を動かしながらコードの挙動なども確認できます。
-      「これをやりたかった! 」が必ず見つかる1冊です。</p>
-    <ul class="column4">
-      <li>
-        <div><img src="http://placehold.it/180x180/"></div>
-        <h3>1 デザイン&レイアウト</h3>
-        <p>レスポンシブのマルチカラム/レスポンシブのシングルページ/メディア風に見せる/背景全面画像&動画/Infinite Scroll/CSSフレームワーク/Masonry/チャット風吹き出し</p>
-      </li>
-      <li>
-        <div><img src="http://placehold.it/180x180/"></div>
-        <h3>1 デザイン&レイアウト</h3>
-        <p>レスポンシブのマルチカラム/レスポンシブのシングルページ/メディア風に見せる/背景全面画像&動画/Infinite Scroll/CSSフレームワーク/Masonry/チャット風吹き出し</p>
-      </li>
-      <li>
-        <div><img src="http://placehold.it/180x180/"></div>
-        <h3>1 デザイン&レイアウト</h3>
-        <p>レスポンシブのマルチカラム/レスポンシブのシングルページ/メディア風に見せる/背景全面画像&動画/Infinite Scroll/CSSフレームワーク/Masonry/チャット風吹き出し</p>
-      </li>
-      <li>
-        <div><img src="http://placehold.it/180x180/"></div>
-        <h3>1 デザイン&レイアウト</h3>
-        <p>レスポンシブのマルチカラム/レスポンシブのシングルページ/メディア風に見せる/背景全面画像&動画/Infinite Scroll/CSSフレームワーク/Masonry/チャット風吹き出し</p>
-      </li>
-    </ul>
+  <section class="section-description" id="section-description">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">内容紹介</h2>
+        <h3 class="section-subtitle">〜 いまWebでよく見るデザイン手法が勢ぞろい 〜</h3>
+      </div>
+      <p>
+        最近は、Webサイト制作で使用する技術が大きく様変わりしはじめています。“モバイルファースト"と呼ばれる考え方が広まっているように、PCよりもスマートフォンからのアクセスのほうが多いWebサイトはすでに珍しくありません。また、いわゆるレガシーブラウザも淘汰されつつあることから、現在はHTML5+CSS3に対応したモダンブラウザを前提に、多彩なデバイスに対応できるWebサイトづくりが主流になっています。</p>
+      <p>
+        本書はこのような制作状況の進化を踏まえ、「これからのWeb制作のスタンダード」となる手法をまとめた解説書です。近年のWebサイトでよく見られるレイアウト/ナビゲーション/エフェクト/UIパーツをステップ・バイ・ステップ形式で紹介しています。ドロップダウンメニューやスライドショーなどの基本から、背景全面動画やMasonryなどの流行の手法まで、いまのWebデザインに欠かせないテクニックを網羅しました。サンプルデータもダウンロードできるので、手を動かしながらコードの挙動なども確認できます。
+        「これをやりたかった! 」が必ず見つかる1冊です。</p>
+      <ul class="description-list">
+        <li>
+          <div class="description-list__icon-bg"><i class="fa fa-object-group"></i></div>
+          <h3 class="description-list__title">1. デザイン&レイアウト</h3>
+          <p>レスポンシブのマルチカラム / レスポンシブのシングルページ / メディア風に見せる / 背景全面画像&動画 / Infinite Scroll / CSSフレームワーク / Masonry /
+            チャット風吹き出し</p>
+        </li>
+        <li>
+          <div class="description-list__icon-bg"><i class="fa fa-bars"></i></div>
+          <h3 class="description-list__title">2. ナビゲーション</h3>
+          <p>アコーデオンメニュー / ドロップダウンメニュー / 上部固定メニュー / ポップアウトメニュー / ページネーション / タブメニュー / オフキャンバスメニュー</p>
+        </li>
+        <li>
+          <div class="description-list__icon-bg"><i class="fa fa-lightbulb-o"></i></div>
+          <h3 class="description-list__title">3. エフェクト&インタラクション</h3>
+          <p>スライドショー / ホバーアニメーション / スクロールアニメーション / ページスクロール / Lightbox / ボタンデザイン / ホバーのコンテンツ切り替え / ポイントアニメーション</p>
+        </li>
+        <li>
+          <div class="description-list__icon-bg"><i class="fa fa-users"></i></div>
+          <h3 class="description-list__title">4. ユーザビリティ</h3>
+          <p>ツールチップ / Now Loading /
+            Googleマップ / 問い合わせフォーム / 検索フォーム / レスポンシブな表組み / Webフォントアイコン / SNSボタンの設置 / タイムラインの取り込み / トップへ戻るボタン / スクロール位置表示
+            / レスポンシブな画像出力 / ドラッグ&ドロップ</p>
+        </li>
+      </ul>
+    </div>
   </section>
-  <section>
-    <h2>著者一覧</h2>
-    <ul class="column4">
-      <li>
-        <div><img src="http://placehold.it/220x220/"></div>
-        <h3>著者名前</h3>
-        <p>ここに著者の説明が入ります。</p>
-      </li>
-      <li>
-        <div><img src="http://placehold.it/220x220/"></div>
-        <h3>著者名前</h3>
-        <p>ここに著者の説明が入ります。</p>
-      </li>
-      <li>
-        <div><img src="http://placehold.it/220x220/"></div>
-        <h3>著者名前</h3>
-        <p>ここに著者の説明が入ります。</p>
-      </li>
-      <li>
-        <div><img src="http://placehold.it/220x220/"></div>
-        <h3>著者名前</h3>
-        <p>ここに著者の説明が入ります。</p>
-      </li>
-      <li>
-        <div><img src="http://placehold.it/220x220/"></div>
-        <h3>著者名前</h3>
-        <p>ここに著者の説明が入ります。</p>
-      </li>
-      <li>
-        <div><img src="http://placehold.it/220x220/"></div>
-        <h3>著者名前</h3>
-        <p>ここに著者の説明が入ります。</p>
-      </li>
-      <li>
-        <div><img src="http://placehold.it/220x220/"></div>
-        <h3>著者名前</h3>
-        <p>ここに著者の説明が入ります。</p>
-      </li>
-      <li>
-        <div><img src="http://placehold.it/220x220/"></div>
-        <h3>著者名前</h3>
-        <p>ここに著者の説明が入ります。</p>
-      </li>
-    </ul>
+  <section class="section-author" id="section-author">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">著者一覧</h2>
+        <h3 class="section-subtitle">〜 総勢22人の執筆者 〜</h3>
+      </div>
+      <ul class="author-list">
+        <li>
+          <div>
+            <img class="author-list__img" src="assets/images/author/goto.jpg" alt="Hirokazu Goto">
+            <h3 class="author-list__title">後藤 寛一</h3>
+            <p class="author-list__text">
+              Webにおけるアニメーション表現を主軸にフロントエンドの構築、開発に従事。インタラクティブなコンテンツの企画、制作をプライベートで行っている。趣味は砂金掘り。</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <img class="author-list__img" src="assets/images/author/seino.jpg" alt="Susumu seino">
+            <h3 class="author-list__title">清野 奨</h3>
+            <p class="author-list__text">デザイナー、プログラマなどを中心に2014年にEXPを発足。2015年から株式会社mgnのTeam LENSデザイン＆マークアップ担当として活動開始。</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <img class="author-list__img" src="assets/images/author/kuramochi.png" alt="Yuki kuramochi">
+            <h3 class="author-list__title">倉持 友喜</h3>
+            <p class="author-list__text">マークアップエンジニア。最近はペットのヤマトヌマエビ観察に夢中。</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <img class="author-list__img" src="assets/images/author/nakamura.jpg" alt="Daiki Nakamura">
+            <h3 class="author-list__title">中村 大騎</h3>
+            <p class="author-list__text">株式会社LIGではフロントエンドエンジニアとしてキャンペーンサイトを主に扱うチームに従事。時々勉強会の登壇も行う。趣味は天体観測。</p>
+          </div>
+        </li>
+      </ul>
+      <p class="notes">人数が多いのでスピーカーの方だけ抜粋しています。</p>
+    </div>
   </section>
-  <section>
-    <h2>出版イベント</h2>
-
-    <h3>「現場のプロが教えるWEBデザイン 新・スタンダードテクニック」発売記念イベント</h3>
+  <section class="section-event" id="section-event">
+    <div class="section-header">
+      <h2 class="section-title">出版イベント</h2>
+      <h3 class="section-subtitle">〜 「現場のプロが教えるWEBデザイン 新・スタンダードテクニック」発売記念イベント 〜</h3>
+    </div>
     <p>株式会社エムディエヌコーポレーションより2015年8月18日に発売された書籍『現場のプロが教えるWEBデザイン
       新・スタンダードテクニック37』の発売記念イベントを開催いたします。イベントではいま現場で使われている技術、ステップアップのために必要な知識等を本書執筆陣が詳しく紹介していきます。</p>
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.6472199877744!2d139.7770492!3d35.710297999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188e9f3bc780df%3A0xc79124fd6f1cdf4b!2z44GE44GE44Kq44OV44Kj44K5!5e0!3m2!1sja!2sjp!4v1443020829822"
-      width="1200" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+    <div class="event-info">
+      <div class="event-summary">
+        <h4 class="event-info__title">開催概要</h4>
+        <dl>
+          <dt>開催日時</dt>
+          <dd>2015年10月14日（水）19：30〜（19：00開場）</dd>
+          <dt>開催場所</dt>
+          <dd>いいオフィス</dd>
+          <dd>〒110-0015 東京都台東区 東上野2丁目18−7</dd>
+          <dt>会場アクセス</dt>
+          <dd>上野駅の地下3番出口より直進。昭和通り沿いの宝くじ売場があるビルの3階です。</dd>
+          <dt>参加費</dt>
+          <dd>1,000円（懇親会費込み）</dd>
+          <dt>定員</dt>
+          <dd>50名</dd>
+          <dt>主催</dt>
+          <dd>株式会社LIG／株式会社エムディエヌコーポレーション</dd>
+        </dl>
+        <p>※ 10月10日以降のキャンセルはご返金いたしかねますので、あらかじめご了承ください。</p>
+      </div>
+      <div class="event-schedule">
+        <h4 class="event-info__title">タイムスケジュール</h4>
+        <dl>
+          <dt>19:25〜19:30</dt>
+          <dd>イベント開催のご挨拶</dd>
+          <dt>19:30〜19:45</dt>
+          <dd>将来使えそうなCSSのプロパティ（後藤 寛一／株式会社LIG）</dd>
+          <dt>19:45〜20:00</dt>
+          <dd>三人日でつくるWordPressテーマ最新制作手法（清野 奨／WP-E）</dd>
+          <dt>20:00〜20:15</dt>
+          <dd>本に載っているテクニックでランディングページを作ってみた。（倉持 友喜）</dd>
+          <dt>20:15〜20:30</dt>
+          <dd>初心者から一歩先に進むために必要なこと（仮）（中村 大騎／株式会社LIG）</dd>
+          <dt>20:40〜21:00</dt>
+          <dd>パネルデスカッション</dd>
+          <dt>21:00〜</dt>
+          <dd>懇親会（21:40まで）</dd>
+        </dl>
+      </div>
+      <div class="google-map" id="google-map"></div>
+    </div>
   </section>
-  <section>
-    <h2>オンラインショップ</h2>
-    <p class="amazon"><a href="http://www.amazon.co.jp/dp/4844365185/">amazonで購入</a></p>
+  <section class="section-buy" id="section-buy">
+    <div class="container">
+      <div class="book-buy">
+        <h2 class="book-buy__title">Amazon、楽天、<br>全国各書店にて発売中！</h2>
+        <p><a href="http://www.mdn.co.jp/di/book/3215203004/" target="_blank">出版社: エムディエヌコーポレーション</a></p>
+        <p class="amazon"><a
+          href="http://www.amazon.co.jp/gp/product/4844365185/ref=as_li_ss_tl?ie=UTF8&camp=247&creative=7399&creativeASIN=4844365185&linkCode=as2&tag=mochiflappe09-22" target="_blank">Amazonで購入</a>
+        </p>
+      </div>
+      <div class="book-img">
+        <a
+          href="http://www.amazon.co.jp/gp/product/4844365185/ref=as_li_ss_tl?ie=UTF8&camp=247&creative=7399&creativeASIN=4844365185&linkCode=as2&tag=mochiflappe09-22" target="_blank">
+          <img src="assets/images/book.jpg" alt="現場のプロが教える WEBデザイン 新・スタンダードテクニック37"/>
+        </a>
+      </div>
+    </div>
   </section>
 </div>
 <footer class="site-footer" role="contentinfo">
-  <p>
+  <div class="container">
     <small>© 2015 <a href="https://github.com/mochiflappe/WebDesignNewStandardTechnique37">mochiflappe</a></small>
-  </p>
+  </div>
 </footer>
+<div class="loading">
+  <div class="spinner">
+    <div class="rect1"></div>
+    <div class="rect2"></div>
+    <div class="rect3"></div>
+    <div class="rect4"></div>
+    <div class="rect5"></div>
+  </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAY3HWKzpOxClMtPzeRkcirJk2_F6JfwoM"></script>
+<script src="assets/js/app.js"></script>
 </body>
 </html>
